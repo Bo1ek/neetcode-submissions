@@ -1,0 +1,13 @@
+public class Solution {
+    public int[] ReplaceElements(int[] arr) {
+        int n = arr.Length;
+        int[] ans = new int[n];
+        int maxRight = -1;
+        for (int i = n - 1; i>=0; i--){
+            ans[i] = maxRight;
+            maxRight = Math.Max(maxRight, arr[i]);
+        }
+        return ans;
+        
+    }
+}
